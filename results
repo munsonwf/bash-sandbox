@@ -1,0 +1,24 @@
+HARNESS ENVIRONMENT CHECKER
+
+======== docker ========
+	Version info: Docker version 20.10.8, build 3967b7d
+	Docker is not running
+
+======== helm ========
+	Version info: version.BuildInfo{Version:"v3.6.3", GitCommit:"d506314abfb5d21419df8c7e7e68012379db2354", GitTreeState:"dirty", GoVersion:"go1.16.6"}
+
+======== kubectl ========
+	Version info: Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.4", GitCommit:"3cce4a82b44f032d0cd1a1790e6d2f5a55d20aae", GitTreeState:"clean", BuildDate:"2021-08-11T18:16:05Z", GoVersion:"go1.16.7", Compiler:"gc", Platform:"darwin/amd64"}
+
+======== kubenv ========
+	NOT installed
+
+======== git ========
+	Version info: git version 2.30.1 (Apple Git-130)
+
+======== kubens ========
+
+======== magic ========
+	NOT installed
+Connected to the internet.
+Not connected to Harness network
