@@ -48,6 +48,7 @@ eaw_command_output () {
     echo "$($1)" | tee -a results
 }
 
+run_check "brew" "-v"
 run_check "docker" "-v"
 check_command_status "docker ps" "🐋 Docker is running" "🕸 Docker is not running"
 run_check "helm" "version"
@@ -57,6 +58,7 @@ run_check "git" "--version"
 eaw_command_output "git config --list"
 eaw_command_output "ssh -T git@github.com"
 run_check "kubens"
+run_check "dockly"
 run_check "magic"
 
 echo "\nCurrent PATH: $PATH"

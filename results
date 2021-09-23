@@ -1,5 +1,12 @@
 HARNESS ENVIRONMENT CHECKER
 
+============= brew =============
+✅ brew installed
+📂 Install location: /usr/local/bin/brew
+🔢 Version info: Homebrew 3.2.13
+Homebrew/homebrew-core (git revision 8c2de31c09; last commit 2021-09-23)
+Homebrew/homebrew-cask (git revision fc44a06e1b; last commit 2021-09-23)
+
 ============= docker =============
 ✅ docker installed
 📂 Install location: /usr/local/bin/docker
@@ -40,6 +47,9 @@ core.precomposeunicode=true
 ============= kubens =============
 ✅ kubens installed
 📂 Install location: /usr/local/bin/kubens
+
+============= dockly =============
+❌ dockly not installed
 
 ============= magic =============
 ❌ magic not installed
