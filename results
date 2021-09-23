@@ -3,25 +3,19 @@ HARNESS ENVIRONMENT CHECKER
 ============= brew =============
 ✅ brew installed
 📂 Install location: /usr/local/bin/brew
-🔢 Version info: Homebrew 3.2.13
-Homebrew/homebrew-core (git revision 8c2de31c09; last commit 2021-09-23)
-Homebrew/homebrew-cask (git revision fc44a06e1b; last commit 2021-09-23)
 
 ============= docker =============
 ✅ docker installed
 📂 Install location: /usr/local/bin/docker
-🔢 Version info: Docker version 20.10.8, build 3967b7d
 🐋 Docker is running
 
 ============= helm =============
 ✅ helm installed
 📂 Install location: /usr/local/bin/helm
-🔢 Version info: version.BuildInfo{Version:"v3.6.3", GitCommit:"d506314abfb5d21419df8c7e7e68012379db2354", GitTreeState:"dirty", GoVersion:"go1.16.6"}
 
 ============= kubectl =============
 ✅ kubectl installed
 📂 Install location: /usr/local/bin/kubectl
-🔢 Version info: Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.4", GitCommit:"3cce4a82b44f032d0cd1a1790e6d2f5a55d20aae", GitTreeState:"clean", BuildDate:"2021-08-11T18:16:05Z", GoVersion:"go1.16.7", Compiler:"gc", Platform:"darwin/amd64"}
 
 ============= kubenv =============
 ❌ kubenv not installed
@@ -29,7 +23,6 @@ Homebrew/homebrew-cask (git revision fc44a06e1b; last commit 2021-09-23)
 ============= git =============
 ✅ git installed
 📂 Install location: /usr/bin/git
-🔢 Version info: git version 2.30.1 (Apple Git-130)
 ⚙️ git config --list
 credential.helper=osxkeychain
 user.email=munsonwf@gmail.com
@@ -41,15 +34,18 @@ core.bare=false
 core.logallrefupdates=true
 core.ignorecase=true
 core.precomposeunicode=true
-⚙️ ssh -T git@github.com
-
 
 ============= kubens =============
 ✅ kubens installed
 📂 Install location: /usr/local/bin/kubens
 
+============= minikube =============
+✅ minikube installed
+📂 Install location: /usr/local/bin/minikube
+
 ============= dockly =============
-❌ dockly not installed
+✅ dockly installed
+📂 Install location: /usr/local/bin/dockly
 
 ============= magic =============
 ❌ magic not installed
@@ -57,3 +53,8 @@ core.precomposeunicode=true
 ============= EXTRA CHECKS =============
 Connected to the internet.
 Not connected to Harness network
+Current user: wyattmunson
+Current PATH: /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
+Current shell: /bin/zsh
+WiFi: CaptainCanary
+OS Info: Darwin Kernel Version 20.6.0: Wed Jun 23 00:26:31 PDT 2021; root:xnu-7195.141.2~5/RELEASE_X86_64

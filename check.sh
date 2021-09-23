@@ -1,7 +1,7 @@
 # command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; exit 1; }
 
 echo FIRST $1
-testVersion=true
+testVersion=false
 
 echo "HARNESS ENV CHECKER\nHarness (c) 1978, Punched Card and Magnetic Tape Division\n"
 echo "HARNESS ENVIRONMENT CHECKER" > results
@@ -33,7 +33,7 @@ run_check () {
     fi
 
     # get version, if version command exists
-    if [[ -n "$installLocation" ]] && [[ -n $2 ]]; then get_version $1 $2; fi
+    if [[ -n "$installLocation" ]] && [[ -n $2 ]] && [[ $testVersion == true ]]; then get_version $1 $2; fi
 }
 
 check_command_status() {
@@ -56,8 +56,11 @@ run_check "kubectl" "version"
 run_check "kubenv"
 run_check "git" "--version"
 eaw_command_output "git config --list"
-eaw_command_output "ssh -T git@github.com"
+# eaw_command_output "ssh -T git@github.com"
 run_check "kubens"
+run_check "minikube"
+MINIKUBE_STATUS=$(minikube status | grep host)
+if [[ $MINIKUBE_STATUS == *Stopped* ]]; then echo "Minikube stopped"; fi
 run_check "dockly"
 run_check "magic"
 
@@ -77,8 +80,19 @@ if [[ $GOOGLE_RESPONSE_CODE == 301 ]]; then echo_and_write "Connected to the int
 PROXY_RESPONSE_CODE=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' admin.harness.io)
 if [[ $PROXY_RESPONSE_CODE == 403 ]]; then echo_and_write "Not connected to Harness network"; else echo_and_write "Connected to Harness network or VPN."; fi
 
+# SHELL ENVS
+echo_and_write "Current user: $USER"
+echo_and_write "Current PATH: $PATH"
+echo_and_write "Current shell: $SHELL"
+WIFI=$(/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport -I | grep -w SSID | awk '{print $2}')
+echo_and_write "WiFi: $WIFI" 
+OS_INFO=$(uname -v)
+echo_and_write "OS Info: $OS_INFO" 
+
 # CHECKING DOCKER
 
 # echo "RUNNING DOCKER CHECK"
 
 # command docker ps 2>/dev/null && echo "Docker running" || echo "Docker not running"
+
+# ps -p $$
